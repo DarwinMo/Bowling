@@ -1,0 +1,38 @@
+{
+  "name": "3_tp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src # Ne réalise l'analyse que sur les sources.",
+    "pretest": "npm run lint # Actions à réaliser avant lancement des tests.",
+    "prestart": "npm run lint # Actions à réaliser avant lancement du logiciel.",
+    "run": "node index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit": "npm run test",
+    "test:integration": "npm run test -- --runTestsByPath vanilla-server.test.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarwinMo/Bowling.git"
+  },
+  "imports": {
+    "#root/*": "./*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarwinMo/Bowling/issues"
+  },
+  "homepage": "https://github.com/DarwinMo/Bowling#readme",
+  "devDependencies": {
+    "eslint": "^10.0.3",
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  },
+  "dependencies": {
+    "globals": "^17.4.0"
+  }
+}
